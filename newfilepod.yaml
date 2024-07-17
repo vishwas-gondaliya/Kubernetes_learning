@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-first-app2
+  labels:
+    app: hello
+    env: production
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      
+
