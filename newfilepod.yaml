@@ -1,33 +1,14 @@
-apiVersion: apps/v1
-kind: ReplicaSet
+apiVersion: v1
+kind: Pod
 metadata:
-  name: myapp-replicaset
+  name: my-first-app2
   labels:
-    name: myapp
+    app: hello
+    env: production
     type: front-end
 spec:
-  template:
-    metadata:
-      name: my-first-app2
-      labels:
-        app: hello
-        env: production
-        type: front-end
-    spec:
-      containers:
-        - name: nginx
-          image: nginx    
-  selector:
-    matchLabels:
-      type: front-end
-  replicas: 3
-
-
-    
-
-
-
-
-
+  containers:
+    - name: nginx
+      image: nginx  
       
 
