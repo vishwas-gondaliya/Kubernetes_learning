@@ -2,7 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-first-deployment
-  labels:    
+  labels:
+    name: my-first-deployment_1
     type: front-end
 spec:
   template:
@@ -17,7 +18,7 @@ spec:
       - name: nginx
         image: nginx  
   
-  replicas: 3
+  replicas: 4
   
   selector:
     matchLabels:
